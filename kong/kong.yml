@@ -1,0 +1,31 @@
+_format_version: "3.0"
+
+services:
+  - name: order-service
+    url: http://order-service:8080
+    routes:
+      - name: orders-route
+        paths:
+          - /orders
+        strip_path: false
+      - name: order-health-route
+        paths:
+          - /health
+        strip_path: false
+
+  - name: stock-service
+    url: http://stock-service:8081
+    routes:
+      - name: stock-route
+        paths:
+          - /stock
+          - /products
+        strip_path: false
+
+  - name: notification-service
+    url: http://notification-service:8082
+    routes:
+      - name: notifications-route
+        paths:
+          - /v1/notifications
+        strip_path: false

@@ -1,0 +1,14 @@
+{
+  "name": "demo/stock-service",
+  "description": "Servicio de stock para la demo de microservicios",
+  "require": {
+    "php": "^8.2",
+    "slim/slim": "^4.14",
+    "slim/psr7": "^1.7"
+  },
+  "autoload": {
+    "psr-4": {
+      "App\\": "src/"
+    }
+  }
+}
